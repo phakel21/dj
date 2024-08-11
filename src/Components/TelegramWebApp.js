@@ -1,23 +1,20 @@
 import React, { useEffect, useState } from 'react';
-import WebApp from '@twa-dev/sdk'
-// const tele = window.Telegram.WebApp
-
+import { WebApp } from '@twa-dev/sdk';
 
 const TelegramWebApp = () => {
     const [username, setUsername] = useState('');
 
     useEffect(() => {
-
+        // Ensure the Web App is ready
         WebApp.ready();
 
-
-        const user = WebApp.initDataUnsafe.user;
+        // Access user information
+        const user = WebApp.initDataUnsafe?.user;
         if (user) {
-            setUsername(user.username || 'No username availablev1');
+            setUsername(user.username || user.first_name || 'No username availablev2');
         } else {
-            setUsername('No user information availablev1');
+            setUsername('No user information availablev2');
         }
-
     }, []);
 
     return (
