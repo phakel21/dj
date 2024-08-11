@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { WebApp } from '@twa-dev/sdk';
+import WebApp  from '@twa-dev/sdk';
 
 const TelegramWebApp = () => {
     const [username, setUsername] = useState('');
