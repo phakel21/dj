@@ -4,9 +4,11 @@ const tele = window.Telegram.WebApp;
 
 
 const TelegramWebApp = () => {
+    const [id, setId] = useState('');
+    const [isBot, setIsBot] = useState('');
     const [username, setUsername] = useState('');
     const [version, setVersion] = useState('');
-    const [id, setId] = useState('');
+   
 
 
     useEffect(() => {
@@ -25,6 +27,9 @@ const TelegramWebApp = () => {
             } else {
                 setUsername('No user information available');
             }
+
+
+            tele.BackButton.show();
 
         } else {
             setUsername('Telegram WebApp is not available');
