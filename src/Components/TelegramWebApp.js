@@ -7,6 +7,7 @@ const TelegramWebApp = () => {
     const [username, setUsername] = useState('');
 
     useEffect(() => {
+        tele.ready();
         
     
             const user = tele.initDataUnsafe.user;
