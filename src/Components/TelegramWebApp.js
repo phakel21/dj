@@ -11,9 +11,9 @@ const TelegramWebApp = () => {
         tele.ready();
 
 
-        const user = tele.initDataUnsafe?.user;
+        
 
-        setUsername(user.username);
+        setUsername(tele.version);
 
 
     }, []);
