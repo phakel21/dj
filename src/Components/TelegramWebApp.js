@@ -9,9 +9,9 @@ const TelegramWebApp = () => {
     useEffect(() => {
         
     
-            const user = tele.WebAppInitData.user;
+            const user = tele.initDataUnsafe.user;
             if (user) {
-                setUsername(user.first_name || 'No username available');
+                setUsername(user.username || 'No username available');
             } else {
                 setUsername('No user information available');
             }
